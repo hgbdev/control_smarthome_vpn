@@ -17,5 +17,6 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.users = require('./user.model')(sequelize);
+db.smarthome = require('./smarthome.model')(sequelize);
 
 module.exports = db;

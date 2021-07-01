@@ -5,6 +5,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const passport = require('./configs/passport.config');
 const db = require('./models');
+const cors = require('cors');
 require('dotenv').config();
 
 const indexRouter = require('./routes/index');
@@ -12,6 +13,7 @@ const indexRouter = require('./routes/index');
 const app = express();
 
 app.use(logger('dev'));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
