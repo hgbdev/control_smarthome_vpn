@@ -35,12 +35,14 @@ const httpsServer = https.createServer(options, app);
  */
 
 const io = new Server(server);
+const ioHttps = new Server(httpsServer);
 
 /**
  * Socket IO Listen
  */
 
 socketSmartHome(io);
+socketSmartHome(ioHttps);
 
 /**
  * Listen on provided port, on all network interfaces.
