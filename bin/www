@@ -47,7 +47,7 @@ socketSmartHome(io);
  */
 
 server.listen(port);
-httpsServer.listen(443);
+httpsServer.listen(5000);
 server.on('error', onError);
 server.on('listening', onListening);
 
